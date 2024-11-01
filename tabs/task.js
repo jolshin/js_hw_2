@@ -9,7 +9,7 @@ function contentToggle(target, tabIndex) {
         }
     }
 
-}
+};
 
 let menuToggle = (e) => {
     let target = e.target;
@@ -19,15 +19,15 @@ let menuToggle = (e) => {
     if (tabs !== null) {
         for (let tab of tabs.children){  
             if (tab.textContent !== target.textContent ) {
-                tab.classList.remove('tab_active')
+                tab.classList.remove('tab_active');
                 ++tabIndex;
             } else if (!tab.className.includes('tab_active') & tab.textContent === target.textContent) {
-                tab.classList.add('tab_active')
+                tab.classList.add('tab_active');
                 contentToggle(target, tabIndex);
             }
         }
 
     }
-}
+};
 
 document.addEventListener('click', menuToggle);
